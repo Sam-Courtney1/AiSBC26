@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "FC26 AiSBC",
+  "version": "1.0.0",
+  "description": "Fully autonomous SBC automation for EA FC 26",
+  "permissions": ["activeTab", "storage", "tabs", "alarms"],
+  "host_permissions": ["https://www.ea.com/ea-sports-fc/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ea.com/ea-sports-fc/ultimate-team/web-app/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

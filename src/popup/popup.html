@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=360">
+  <link rel="stylesheet" href="popup.css">
+  <title>FC26 AiSBC</title>
+</head>
+<body>
+  <div class="header">
+    <h1>FC26 AiSBC</h1>
+    <span class="version">v1.0.0</span>
+  </div>
+
+  <div class="status-bar">
+    <span id="statusDot" class="status-dot"></span>
+    <span id="statusText">Idle</span>
+  </div>
+
+  <div class="settings">
+    <label>
+      Max Per Player (coins)
+      <input type="number" id="maxPrice" value="1500" min="100" step="100">
+    </label>
+    <label>
+      Total Budget (coins)
+      <input type="number" id="totalBudget" value="50000" min="1000" step="1000">
+    </label>
+    <label>
+      Repeat Count
+      <input type="number" id="repeatCount" value="1" min="1" max="50">
+    </label>
+    <label>
+      Speed
+      <select id="speedMode">
+        <option value="slow">Slow</option>
+        <option value="normal" selected>Normal</option>
+        <option value="fast">Fast</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="controls">
+    <button id="startBtn" class="btn btn-primary">Start League Grind</button>
+    <div class="controls-row">
+      <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+      <button id="stopBtn" class="btn btn-danger" disabled>Stop</button>
+      <button id="killBtn" class="btn btn-kill" disabled>KILL</button>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div id="progress" class="progress-text">0/0 squads</div>
+    <div id="currentLeague" class="league-text"></div>
+    <div id="repeatProgress" class="repeat-text">Repeat 0/0</div>
+  </div>
+
+  <div class="log-section">
+    <h2>Activity Log</h2>
+    <div id="activityLog" class="activity-log"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

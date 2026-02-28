@@ -1,0 +1,25 @@
+{
+  "name": "fc26-aisbc",
+  "version": "1.0.0",
+  "description": "Fully autonomous SBC automation for EA FC 26",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/chrome": "^0.1.37",
+    "@types/jest": "^30.0.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
